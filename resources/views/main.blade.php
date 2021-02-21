@@ -34,6 +34,18 @@
         </div>
     </section>
 </div>
+<section id="footer">
+    <div class="footer c">
+        <div class="brand"><h1><span>A</span>railym<span>O</span>spankhan</span></h1></div>
+        <h2>Your Complete Web Solution</h2>
+        <div class="social-icon">
+            <div class="social-item"><a href="#"><img src="/img/instt.png" height="33px" alt=""></a></div>
+            <div class="social-item"><a href="#"><img src="/img/vkk.webp" height="36px" alt=""></a></div>
+            <div class="social-item"><a href="#"><img src="/img/twit.png"" height="35px" alt=""></a></div>
+        </div>
+        <p>© Copyright 2021 | Powered by ArailymO</p>
+    </div>
+</section>
 <!-- 21.02.2021 "end main section" -->
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');* {
@@ -128,6 +140,45 @@
         margin-right: 10px;
         text-align: left;
         margin-left: 50px;
+    }
+
+    #footer{
+        background-image:linear-gradient(60deg, #29323c 0%, #485563 100%) ;
+    }
+    #footer .footer{
+        min-height: 200px;
+        flex-direction: column;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+    .brand h1{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    .brand h1 span{
+        color: darkslateblue;
+    }
+    #footer h2{
+        color: white;
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #footer .social-icon{
+        display: flex;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    #footer .social-item{
+        margin: 0 7px;
+    }
+    #footer p{
+        color: white;
+        font-size: 1rem;
     }
 </style>
 </body>

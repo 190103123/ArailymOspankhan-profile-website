@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="col-rigth">
-            <h1 class="section-title"><span>ABOUT ME</span></h1>
+            <h1 class="section-title">ABOUT<span> ME</span></h1>
             <h2>Front End Developer</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -39,6 +39,19 @@
     </div>
 </section>
 </div>
+
+<section id="footer">
+    <div class="footer c">
+        <div class="brand"><h1><span>A</span>railym<span>O</span>spankhan</span></h1></div>
+        <h2>Your Complete Web Solution</h2>
+        <div class="social-icon">
+            <div class="social-item"><a href="#"><img src="/img/instt.png" height="33px" alt=""></a></div>
+            <div class="social-item"><a href="#"><img src="/img/vkk.webp" height="36px" alt=""></a></div>
+            <div class="social-item"><a href="#"><img src="/img/twit.png"" height="35px" alt=""></a></div>
+        </div>
+        <p>© Copyright 2021 | Powered by ArailymO</p>
+    </div>
+</section>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');* {
         padding: 0;
@@ -75,6 +88,9 @@
         text-decoration: none;
         color: #fff;
         font-size: 16px;
+    }
+    span{
+        color: white;
     }
     .container{
         background-size: cover;
@@ -147,6 +163,45 @@
         width: 34%;
         border: 7px solid darkslateblue;
         z-index: -2;
+    }
+
+    #footer{
+        background-image:linear-gradient(60deg, #29323c 0%, #485563 100%) ;
+    }
+    #footer .footer{
+        min-height: 200px;
+        flex-direction: column;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+    .brand h1{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    .brand h1 span{
+        color: darkslateblue;
+    }
+    #footer h2{
+        color: white;
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #footer .social-icon{
+        display: flex;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    #footer .social-item{
+        margin: 0 7px;
+    }
+    #footer p{
+        color: white;
+        font-size: 1rem;
     }
     </style>
 </body>
