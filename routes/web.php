@@ -21,4 +21,7 @@ Route::get('/main', function () {
     return view('main');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
 

@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="name c" id="photo">
-            <img src="/img/prof.png" alt ="profil img" height="450px">
+            <img src="/img/prof.png" alt ="profil img" height="400px">
         </div>
     </section>
 </div>
@@ -77,17 +77,18 @@
     nav ul li a{
         text-decoration: none;
         color: #fff;
-        font-size: 15px;
+        font-size: 16px;
     }
     /*hero section*/
     .container{
         background-size: cover;
-        background-position: top center;
+        background-position:  center;
         position: relative;
         z-index: 2;
         padding-left:8%;
         padding-right: 8%;
         box-sizing: border-box;
+        height: 800px;
     }
 
     .container{
