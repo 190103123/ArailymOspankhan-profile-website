@@ -13,9 +13,9 @@
         <img src="/img/logo.png" class="logo">
         <nav>
             <ul>
-                <li><a href="main.html">MAIN</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="{{ route('main') }}">MAIN</a></li>
+                <li><a href="{{ route('about') }}">ABOUT</a></li>
+                <li><a href="{{ route('contact') }}">CONTACT</a></li>
             </ul>
         </nav>
     </div>
