@@ -29,3 +29,11 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/post/create', function () {
+    DB::table('post')->insert([
+        'ID' => '1',
+        'title' => 'Most beautiful cities in the world',
+        'body' => 'Each locality has its own characteristics, history, architecture and interesting places, so it is very difficult to distinguish the best of them. But still, some of them are noted by tourists in their reviews more often than others. Thus, we managed to make a rating of the most beautiful cities in the world, which we invite you to get acquainted with.'
+    ]);
+});
