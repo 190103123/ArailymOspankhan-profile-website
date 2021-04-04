@@ -6,7 +6,7 @@ use App\Models\Post;
 use App\Models\Consumer;
 use App\Http\Controllers\ConsumerController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\BlogController;
 use GuzzleHttp\Psr7\UploadedFile;
 
@@ -64,4 +64,4 @@ Route::get('post/{id}',[BlogController::class, 'get_post']);
 Route::get('/consumer', [ConsumerController::class, 'index']);
 Route::post('/consumer/send', [ConsumerController::class, 'store'])->name('add-user');
 
-
+Route::get('/sendEmail', [MailController::class,'sendEmail']);
