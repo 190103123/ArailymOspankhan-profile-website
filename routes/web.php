@@ -3,8 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
+use App\Models\Consumer;
+use App\Http\Controllers\ConsumerController;
+use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\BlogController;
+use GuzzleHttp\Psr7\UploadedFile;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +59,9 @@ Route::get('blog/create', function(){
 Route::post('blog/create', [BlogController::class, 'store'])->name('add-post');
 
 Route::get('post/{id}',[BlogController::class, 'get_post']);
+
+//lab 8
+Route::get('/consumer', [ConsumerController::class, 'index']);
+Route::post('/consumer/send', [ConsumerController::class, 'store'])->name('add-user');
+
+
