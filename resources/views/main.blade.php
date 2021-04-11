@@ -5,28 +5,44 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <title>MY WEBSITE</title>
 </head>
 <body>
 <!-- 21.02.2021  "main section" -->
+
 <div class="container">
     <div class="navbar">
         <img src="/img/logo.png" class="logo">
         <nav>
             <ul>
-                <li><a href="{{ route('main') }}">MAIN</a></li>
-                <li><a href="{{ route('about') }}">ABOUT</a></li>
-                <li><a href="{{ route('contact') }}">CONTACT</a></li>
+
+                <li><a href="{{ route('main') }}">{{__('main.main')}}</a></li>
+                <li><a href="{{ route('about') }}">{{__('main.about')}}</a></li>
+                <li><a href="{{ route('contact') }}">{{__('main.contact')}}</a></li>
+                @php $locale = session()->get('locale'); @endphp
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span > </span> {{__('main.lang')}}</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+                        <a class="dropdown-item" href="en"><span class="flag-icon flag-icon-us"> </span>  English</a>
+                        <a class="dropdown-item" href="ru"><span class="flag-icon flag-icon-ru"> </span>  Russian</a>
+                        <a class="dropdown-item" href="kz"><span class="flag-icon flag-icon-kz"> </span>  Kazakh</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </div>
 
+
+
+
     <section id = "name">
         <div class ="name c">
             <div >
-                <h1>Hello, </h1>
-                <h1> My name is </h1>
-                <h1 >Arailym</h1>
+                <h1>{{__('main.hello')}} </h1>
+                <h1> {{__('main.my')}} </h1>
+                <h1 >{{__('main.name')}}</h1>
             </div>
         </div>
         <div class="name c" id="photo">
@@ -34,6 +50,8 @@
         </div>
     </section>
 </div>
+
+
 <section id="footer">
     <div class="footer c">
         <div class="brand"><h1><span>A</span>railym<span>O</span>spankhan</span></h1></div>
@@ -83,7 +101,7 @@
     }
     nav ul li{
         list-style: none;
-        display: inline-block;
+        display: inline flow-root list-item;
         margin-left: 60px;
     }
     nav ul li a{
@@ -101,6 +119,7 @@
         padding-right: 8%;
         box-sizing: border-box;
         height: 800px;
+        max-width: 1800px;
     }
 
     .container{
@@ -181,5 +200,8 @@
         font-size: 1rem;
     }
 </style>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </body>
 </html>

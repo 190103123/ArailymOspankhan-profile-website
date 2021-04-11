@@ -6,8 +6,11 @@ use App\Models\Post;
 use App\Models\Consumer;
 use App\Http\Controllers\ConsumerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LocalizationController;
+
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\BlogController;
+use Illuminate\Support\Facades\App;
 use GuzzleHttp\Psr7\UploadedFile;
 
 /*
@@ -27,9 +30,17 @@ Route::get('/', function () {
 });
 
 Route::get('/main', function () {
+  return view('main');
+})->name('main');
+//lang
+Route::get('/main/{lang?}', function($lang){
+    App::setlocale($lang);
     return view('main');
 })->name('main');
 
+Route::get('/{lang?}', [LocalizationController::class, 'index']);
+
+//*****
 Route::get('/about', function () {
     return view('about');
 })->name('about');
